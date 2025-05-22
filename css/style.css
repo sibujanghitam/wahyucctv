@@ -1,0 +1,192 @@
+/* General Styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px;
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.section-subtitle {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Service Cards */
+.service-card {
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+/* Portfolio Cards */
+.portfolio-card {
+    transition: transform 0.3s ease;
+    border: none;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-card img {
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Certification Cards */
+.certification-card {
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+}
+
+.certification-icon {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+/* Contact Form */
+#contactForm .form-control {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .hero-section img {
+        margin-top: 30px;
+    }
+}
+/* Portfolio Image Styling */
+.portfolio-img {
+    height: 400px; /* Sesuaikan tinggi yang diinginkan */
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Untuk membuat tinggi card seragam */
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.portfolio-card .card-body {
+    flex: 1;
+}
+/* Container untuk gambar sertifikasi */
+.certification-image-container {
+    height: 300px; /* Tinggi yang diinginkan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Warna background */
+    border-bottom: 1px solid #eee;
+}
+
+/* Gambar sertifikasi */
+.certification-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Pastikan seluruh gambar terlihat */
+    width: auto;
+    height: auto;
+}
+
+/* Untuk card sertifikasi */
+.certification-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .certification-image-container {
+        height: 250px;
+    }
+}
+.portfolio-card {
+    border: none;
+}
+.card:focus, .card:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://c.pxhere.com/photos/a0/b6/photo-19152.jpg!d') center/cover no-repeat;
+    /* properti lainnya tetap sama */
+}
